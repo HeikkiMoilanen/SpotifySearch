@@ -1,0 +1,68 @@
+.body {
+	background-image: url("http://www.publicdomainpictures.net/pictures/40000/velka/sky-1363333250XvV.jpg");
+}
+
+ul {
+	list-style-type: none;
+}
+
+li {
+	width: 80%;
+	border-left: 10%;
+	border-right: 10%;
+	border-radius: 5px;
+}
+
+.selected-class-name {
+  background-color: lightgreen;
+}
+
+.search-container {
+	padding: 5px;
+	border-radius: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	width: 30%;
+	background-color: white;
+	opacity: 0.9;
+	text-align: center;
+}
+
+.results-container {
+	float:left;
+	background-color:rgba(255,255,255,0.8);
+	width: 25%;
+	min-width: 200px;
+	border-radius: 5px;
+}
+
+.results-left {
+	margin-left: 4%;
+	margin-right: 4%;
+}
+
+.results-middle {
+	margin-left: 4%;
+	margin-right: 4%;
+}
+
+.results-right {
+	margin-left: 4%;
+	margin-right: 4%;
+}
+.search-text {
+
+	font-size: 20px;
+}
+.list-title {
+	text-align: center;
+	font-size: 20px;
+}
+
+.album-cover {
+	width: 80%;
+	margin-left: 10%;
+	margin-right: auto;
+	margin-top: 8px;
+}

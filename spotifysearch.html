@@ -1,0 +1,54 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script src="spotifysearch.js"></script> 
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body class="body">
+	<div ng-app="myApp" ng-controller="myCtrl">
+
+		<div class="search-container">
+			<div class="search-text"> Search </div>
+			Artists <input type="checkbox" ng-model="searchArtist" checked>
+			Albums: <input type="checkbox" ng-model="searchAlbum" checked> <br>
+			<input type="text" ng-model="searchString" ng-keyup="$event.keyCode == 13 && searchClicked()">
+			<br><br>
+			<button ng-click="searchClicked()">Search</button>
+		</div>
+		<div class="results-container results-left">
+			<div class="list-title">Artists</div>
+			<ul>
+				<li ng-repeat="artist in artists" ng-click="listAlbumsByArtist(artist.id, $index)"
+					ng-class="{ 'selected-class-name': $index == selectedArtistIndex }">
+					{{artist.name}}
+				</li>
+			</ul>
+		</div>
+		<div class="results-container results-middle">
+
+			<div class="list-title">Albums</div>
+			<ul>
+				<li ng-repeat="album in albums" ng-click="listTracksByAlbum(album, $index)" 
+					ng-class="{ 'selected-class-name': $index == selectedAlbumIndex }">
+
+					{{album.name}}
+				</li>
+			</ul>
+		</div>
+
+		<div class="results-container results-right" ng-show="showTracks">
+			<img class="album-cover" src={{albumImage}}>
+			<div class="list-title">Tracks</div>
+			<ul>
+				<li ng-repeat="track in tracks">
+					{{track.name}}
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+
+
+</html> 
