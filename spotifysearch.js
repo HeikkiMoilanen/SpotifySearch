@@ -11,7 +11,7 @@ app.controller('myCtrl', function($scope, $http) {
 	$scope.selectedAlbumIndex = -1;
 
 	$scope.searchClicked = function() {
-		if($scope.searchString != undefined) {
+		if($scope.searchString != undefined && $scope.searchString != "") {
 			resetResults();
 			if($scope.searchArtist) {
 				searchArtists();
